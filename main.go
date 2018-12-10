@@ -19,8 +19,11 @@ func setupRouter() *gin.Engine {
 	})
 
 	//make login page
+	r.LoadHTMLGlob("templates/**/*")
 	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "login page")
+		c.HTML(http.StatusOK, "login/index.tmpl", gin.H{
+			"title": "Login Page",
+		})
 	})
 
 	// Get user value
