@@ -48,7 +48,10 @@ func setupRouter() *gin.Engine {
 		"foo":  "bar", // user:foo password:bar
 		"manu": "123", // user:manu password:123
 	}))
-
+	authorized.POST("/", func(c *gin.Context) {
+		user := c.MustGet(gin.AuthUserKey).(string);
+		c.JSON(http.StatusOK, gin.H{"status": "Logged in!"});
+	});
 	authorized.POST("admin", func(c *gin.Context) {
 		user := c.MustGet(gin.AuthUserKey).(string)
 
