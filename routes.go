@@ -1,0 +1,4 @@
+
+func setupRouter() *gin.Engine {
+
+}
