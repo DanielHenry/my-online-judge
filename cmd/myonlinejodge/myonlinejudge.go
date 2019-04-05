@@ -5,8 +5,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var db = make(map[string]string)
-
 func main() {
 	r := routes.setup();
 	// Listen and Server in 0.0.0.0:8090
