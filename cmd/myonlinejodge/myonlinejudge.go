@@ -2,10 +2,6 @@ package main
 
 import (
 	"net/http"
-
-    "github.com/DanielHenry/my-online-judge/routes"
-    "github.com/DanielHenry/my-online-judge/app/Http/Controllers"
-
 	"github.com/gin-gonic/gin"
 )
 
