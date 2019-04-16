@@ -1,0 +1,5 @@
+package userscontroller
+
+func Index() {
+	
+}
